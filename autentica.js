@@ -45,7 +45,7 @@ server.post('/autentica',function(req, res ){
       var id = user.empresa_id ;
       var emailempresa = user.email ;
       var token = jwt.sign({ id , emailempresa }, 'teste', {
-        expiresIn: '7d' // expires in 5min
+        expiresIn: '7d' // expires in 5min ~~~~
       });
       res.status(200).send({  token: token });
       
