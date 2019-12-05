@@ -4,6 +4,7 @@
   "description": "API AUTENTICACAO",
   "main": "index.js",
   "scripts": {
+    "install": "npm install",
     "start": "node autentica.js"
   },
   "keywords": [
