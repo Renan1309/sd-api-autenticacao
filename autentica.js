@@ -22,7 +22,7 @@ server.post('/autentica',function(req, res ){
     console.log(req.body);
 
     
-    pool.query(`select empresa_id from empresas where email = '${req.body.email}' and senha = '${req.body.senha}'` 
+    pool.query(`select empresa_id , email from empresas where email = '${req.body.email}' and senha = '${req.body.senha}'` 
     , (error, ret) => {
      if (error) {
       
@@ -43,7 +43,8 @@ server.post('/autentica',function(req, res ){
       }
       console.log('passou')
       var id = user.empresa_id ;
-      var token = jwt.sign({ id }, 'teste', {
+      var emailempresa = user.email ;
+      var token = jwt.sign({ id , emailempresa }, 'teste', {
         expiresIn: '7d' // expires in 5min
       });
       res.status(200).send({  token: token });
