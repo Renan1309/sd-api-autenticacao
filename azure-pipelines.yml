@@ -17,5 +17,4 @@ steps:
 
 - script: |
     npm install
-    node autentica
   displayName: 'npm install and build'
