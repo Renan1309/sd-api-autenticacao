@@ -4,7 +4,7 @@
   "description": "API AUTENTICACAO",
   "main": "index.js",
   "scripts": {
-    "start": "node sd-api-autenticacao/autentica.js"
+    "start": "node autentica.js"
   },
   "keywords": [
     "api",
